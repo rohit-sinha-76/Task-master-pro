@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function addTask() {
+    // this function may throw a exception so we are using try catch
     try {
         const taskInput = document.getElementById('taskInput');
         const deadlineInput = document.getElementById('deadlineInput');
@@ -219,7 +220,7 @@ function refreshTasks() {
         throw error;
     }
 }
-
+// this is a event listner 
 document.addEventListener('keypress', function(e) {
     try {
         const taskInput = document.getElementById('taskInput');
